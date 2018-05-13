@@ -23,10 +23,11 @@ from store import views
 
 
 urlpatterns = [
-    path(r'', views.index, name="index"),
+    path('$', views.index, name="index"),
     path('store/', include('store.urls')),
+    path('details/', views.detail),
+    path('result/', views.search),
     path('admin/', admin.site.urls),
-    #url(r'^admin/', admin.site.urls),
 ]
 
 if settings.DEBUG:
