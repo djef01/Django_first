@@ -23,7 +23,7 @@ from store import views
 
 
 urlpatterns = [
-    path('$', views.index, name="index"),
+    path('', views.index, name="index"),
     path('store/', include('store.urls')),
     path('details/', views.detail),
     path('result/', views.search),
